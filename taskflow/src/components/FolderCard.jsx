@@ -56,7 +56,7 @@ function FolderCard({ folder, onClick, onDelete }) {
             style={{ width: `${percentage}%` }}
           ></div>
         </div>
-        <span style={{ fontSize: '12px', fontWeight: '600', alignSelf: 'flex-end' }}>
+        <span className="folder-progress-summary">
           {percentage}%
         </span>
       </div>

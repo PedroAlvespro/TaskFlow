@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Calendar, AlertCircle, Lock, Unlock } from 'lucide-react';
+import { Check, Calendar, Lock, Unlock, Pencil, Trash2, Save, X } from 'lucide-react';
 
 function TaskItem({ task, onToggleComplete, onDeleteTask, onEditTask, onBlockTask, onUnblockTask }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -175,14 +175,16 @@ function TaskItem({ task, onToggleComplete, onDeleteTask, onEditTask, onBlockTas
               className="action-btn save"
               title="Confirmar alterações"
             >
-              Confirmar
+              <Save size={14} />
+              <span>Confirmar</span>
             </button>
             <button
               onClick={handleCancel}
               className="action-btn cancel"
               title="Cancelar edição"
             >
-              Cancelar
+              <X size={14} />
+              <span>Cancelar</span>
             </button>
           </>
         ) : (
@@ -194,7 +196,8 @@ function TaskItem({ task, onToggleComplete, onDeleteTask, onEditTask, onBlockTas
                   className="action-btn edit"
                   title="Editar tarefa"
                 >
-                  Editar
+                  <Pencil size={14} />
+                  <span>Editar</span>
                 </button>
               )}
               {task.status !== 'bloqueada' ? (
@@ -223,7 +226,8 @@ function TaskItem({ task, onToggleComplete, onDeleteTask, onEditTask, onBlockTas
               className="action-btn delete"
               title="Excluir tarefa"
             >
-              Excluir
+              <Trash2 size={14} />
+              <span>Excluir</span>
             </button>
           </>
         )}

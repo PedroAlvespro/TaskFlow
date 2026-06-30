@@ -522,23 +522,16 @@ function App() {
         /* TELA DE UMA PASTA ESPECÍFICA */
         <>
           <div 
-            style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '12px', 
-              padding: '12px 16px', 
-              backgroundColor: 'var(--bg-app)', 
-              borderRadius: '12px', 
-              borderLeft: `5px solid ${activeFolder.cor}` 
-            }}
+            className="folder-context-card"
+            style={{ '--active-folder-color': activeFolder.cor }}
           >
-            <div style={{ color: activeFolder.cor, display: 'flex', alignItems: 'center' }}>
+            <div className="folder-context-icon">
               <ActiveFolderIcon size={24} />
             </div>
-            <h2 style={{ fontFamily: 'var(--font-title)', fontSize: '20px', fontWeight: '600' }}>
+            <h2 className="folder-context-title">
               {activeFolder.nome}
             </h2>
-            <span style={{ fontSize: '14px', color: 'var(--text-secondary)', marginLeft: 'auto', fontWeight: '500' }}>
+            <span className="folder-context-count">
               {activeFolder.tarefas ? activeFolder.tarefas.length : 0} tarefas cadastradas
             </span>
           </div>

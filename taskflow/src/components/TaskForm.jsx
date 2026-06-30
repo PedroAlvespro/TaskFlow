@@ -72,15 +72,14 @@ function TaskForm({ onAddTask }) {
             value={note}
             onChange={(e) => setNote(e.target.value)}
             placeholder="Ex: Entregar antes das 18h..."
-            className="form-input"
-            style={{ padding: '8px 12px', fontSize: '13px' }}
+            className="form-input compact-input"
             maxLength={150}
           />
         </div>
 
         {/* Botão Submeter */}
-        <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-          <button type="submit" className="task-submit-btn" style={{ padding: '10px 24px', height: '39px' }}>
+        <div className="task-submit-wrapper">
+          <button type="submit" className="task-submit-btn">
             <Plus size={18} />
             <span>Adicionar</span>
           </button>
